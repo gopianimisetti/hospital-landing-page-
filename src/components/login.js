@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Veer from "./care-hospital-logo.jpg";
 import './login.css';
@@ -24,7 +25,7 @@ const Login = ({ onLogin }) => { // Receive onLogin as a prop
 
         if (mobileNumber === '7382664563' && password === 'Nagagopi@123') {
             toast.success('Hello Doctor Your Login is  Succesfull');
-            onLogin(); // Call onLogin function to update login state
+            onLogin(); 
             navigate('/patientdetails');
         } else {
             toast.error(' Hello Doctor Please enter valid credentials.');

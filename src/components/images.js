@@ -14,7 +14,7 @@ function Imagess() {
   return (
     <Container style={{ backgroundColor: "skyblue" }}>
       <Row className="justify-content-center">
-        <h1 style={{ marginBottom: '60px', marginLeft:"900px" }}>Center Of Excellence</h1>
+        <h1 style={{ marginBottom: '60px', marginLeft:"200px" }}>Center Of Excellence</h1>
       </Row>
       <Row className="justify-content-center">
         <Col xs={6} md={4} className="text-center mb-4">

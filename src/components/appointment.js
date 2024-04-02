@@ -1,14 +1,15 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './appointment.css';
-import Veer from "./care-hospital-logo.jpg";
-import Navbarr from './Navbar';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbarr from './Navbar';
+import Veer from "./care-hospital-logo.jpg";
+import './appointment.css';
 
 const Appointment = () => {
     const navigate = useNavigate();
-    const [formData, setFormData] = useState({ patientName: '',phoneNumber: '',patientAge: '',gender: '',time: '',date: ''});
+    const [formData, setFormData] = useState({ patientName: '', phoneNumber: '', patientAge: '', gender: '', time: '', date: '' });
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,9 +19,9 @@ const Appointment = () => {
         if (formData.patientName === "" || formData.phoneNumber === "" || formData.patientAge === "" || formData.gender === "" || formData.time === "" || formData.date === "") {
             toast.error("Please fill in all fields");
         } else {
-            const allFormData = JSON.parse(localStorage.getItem('allFormData')) || [];
+            const allFormData = JSON.parse(sessionStorage.getItem('allFormData')) || [];
             allFormData.push(formData);
-            localStorage.setItem('allFormData', JSON.stringify(allFormData));
+            sessionStorage.setItem('allFormData', JSON.stringify(allFormData));
             toast.success("Appointment booked successfully");
             navigate('/submit');
         }
@@ -55,7 +56,7 @@ const Appointment = () => {
                     <label className='input-label'>Date:</label>
                     <input type='date' name='date' value={formData.date} onChange={handleChange} className='input-field' />
 
-                     <center><button onClick={handleSubmit} className='submit-button'>Submit</button></center>
+                    <center><button onClick={handleSubmit} className='submit-button'>Submit</button></center>
                 </div>
             </div>
         </>
@@ -63,3 +64,6 @@ const Appointment = () => {
 };
 
 export default Appointment;
+
+
+
