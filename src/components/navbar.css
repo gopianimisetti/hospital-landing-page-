@@ -1,0 +1,17 @@
+/* Navbar.css */
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+    background-color: skyblue; /* Background color */
+  }
+  
+  /* Style for dropdown items */
+  .dropdown-item {
+    color: #fff; /* Text color */
+  }
+  
+  /* Hover effect for dropdown items */
+  .dropdown-item:hover {
+    background-color: #007bff; /* Background color on hover */
+  }
+  
